@@ -34,7 +34,7 @@ function get_weather() {
         return;
     }
     
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`)
         .then(response => response.json())
         .then(weather => {
             console.log(weather);       // debug API values
