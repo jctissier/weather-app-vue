@@ -34,7 +34,7 @@ function get_weather() {
         return;
     }
     
-    fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`, headers={'Access-Control-Allow-Origin': '*'})
+    fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${city}`, {headers: {'Access-Control-Allow-Origin': '*'}})
         .then(response => response.json())
         .then(weather => {
             console.log(weather);       // debug API values
